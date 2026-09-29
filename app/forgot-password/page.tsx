@@ -22,7 +22,7 @@ export default function ForgotPasswordPage() {
     const email = form.get("email") as string;
 
     const { error } = await supabase.auth.resetPasswordForEmail(email, {
-      redirectTo: `${window.location.origin}/reset-password`,
+      redirectTo: `https://knot-url.vercel.app/reset-password`,
     });
 
     setLoading(false);
