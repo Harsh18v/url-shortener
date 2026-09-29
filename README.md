@@ -1,41 +1,63 @@
-# Knot — URL shortener (frontend only)
+# 🔗 Knot — URL Shortener
 
-Frontend-only Next.js app for a URL shortener product called **Knot**.
-No backend or database is wired up — forms and the dashboard use local
-component state and mock data so you can drop your own API calls in.
+Knot is a modern and simple URL shortener built with **Next.js, Tailwind CSS, and Supabase**.
 
-## Stack
+It allows users to create short, shareable URLs, manage their links from a dashboard, create custom aliases, and track link clicks.
 
-- Next.js 14 (App Router) + TypeScript
-- Tailwind CSS (custom tokens — see `tailwind.config.ts`)
-- Fonts: Fraunces (display), Inter (body), JetBrains Mono (short links / code)
+## ✨ Features
 
-## Pages
+- 🔗 Create short URLs from long URLs
+- ⚡ Generate unique short codes automatically
+- ✏️ Create custom aliases
+- 📊 Track link clicks
+- 📋 Manage all shortened URLs from a dashboard
+- 🗑️ Delete shortened URLs
+- 🔐 User authentication
+- 🔑 Forgot password and password reset
+- 🛡️ Protected dashboard routes
+- 📱 Responsive design
+- 🚀 Fast and lightweight
+- ☁️ Supabase database and authentication
+- 🌐 Deployable on Vercel
 
-| Route              | Purpose                                              |
-| ------------------ | ----------------------------------------------------- |
-| `/`                 | Landing page with a working (client-only) demo widget |
-| `/login`            | Log in form                                            |
-| `/signup`           | Sign up form                                           |
-| `/forgot-password`  | Password reset request form                            |
-| `/dashboard`        | Create links + table of links (mock data)              |
+## 🛠️ Tech Stack
 
-## Where to plug in your backend
+### Frontend
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
 
-- `app/login/page.tsx`, `app/signup/page.tsx`, `app/forgot-password/page.tsx`
-  — each `handleSubmit` has a `// Backend wiring goes here.` comment.
-- `app/dashboard/page.tsx` — `handleCreate` currently generates a fake code
-  client-side (`lib/mock.ts`); replace it with a call to your API.
-- `lib/mock.ts` — swap `initialLinks` for data fetched from your database
-  (e.g. in a server component, or via a client-side fetch on mount).
-- The actual short domain (`knot.link`) is hardcoded in `ShortenDemo.tsx`
-  and `LinksTable.tsx` — replace with your real short domain.
+### Backend & Database
+- Supabase
+- Supabase Authentication
+- PostgreSQL
+- Next.js API Routes
 
-## Getting started
+### Deployment
+- Vercel
 
-```bash
-npm install
-npm run dev
-```
+## 📁 Project Structure
 
-Open http://localhost:3000.
+```text
+knot/
+├── app/
+│   ├── api/
+│   │   └── urls/
+│   ├── dashboard/
+│   ├── login/
+│   ├── signup/
+│   ├── forgot-password/
+│   ├── reset-password/
+│   └── [shortCode]/
+│
+├── components/
+├── lib/
+│   └── supabase/
+│
+├── public/
+├── .env.local
+├── package.json
+├── next.config.ts
+├── tsconfig.json
+└── README.md
