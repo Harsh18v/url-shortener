@@ -117,7 +117,7 @@ export default function LinksTable({ links, onDelete, }: { links: LinkRecord[]; 
             {link.original}
           </td>
           <td className="truncate border border-line px-4 py-3 font-mono text-knot-dark">
-            knot.link/{link.code}
+            knot-url/{link.code}
           </td>
           <td className="border border-line px-4 py-3 text-ink">
             {link.clicks}
