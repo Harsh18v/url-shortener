@@ -117,7 +117,7 @@ export default function LinksTable({ links, onDelete, }: { links: LinkRecord[]; 
             {link.original}
           </td>
           <td className="truncate border border-line px-4 py-3 font-mono text-knot-dark">
-            knot-url/{link.code}
+            knot-url.vercel.app/{link.code}
           </td>
           <td className="border border-line px-4 py-3 text-ink">
             {link.clicks}

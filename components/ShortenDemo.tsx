@@ -20,7 +20,7 @@ export default function ShortenDemo() {
   function handleShorten(e: React.FormEvent) {
     e.preventDefault();
     if (!url.trim()) return;
-    setResult(`knot-url/${generateCode()}`);
+    setResult(`knot-url.vercel.app/${generateCode()}`);
     setCopied(false);
   }
 
